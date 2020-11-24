@@ -1,0 +1,8 @@
+#!/bin/sh
+
+todaysDate="$(date +%Y-%d-%m)"
+noteFilename="$HOME/projects/notes/test-notes/"$todaysDate".md"
+
+if [ ! -f $noteFilename ]; then
+  echo "# Notes "$todaysDate"" > $noteFilename
+fi
